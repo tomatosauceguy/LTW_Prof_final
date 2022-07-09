@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:300,200');
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #9BDAF4;
+}
+
+/*Signup*/
+body header #signup a{
+    text-decoration: none;
+    color: white;
+    margin: 1em;
+    font-size: 20px;
+}
+
+/*New Unter Eats*/
+body > header > h1{
+    color: white;
+    text-shadow: 1px 1px 4px #CD5E0E;
+    font-size: 3em;
+    padding-left: 1em;
+    font-family: 'Poppins';
+}
+
+
+/*Discover amazing restaurants*/
+body > main h3{
+    text-shadow: 4px 4px 7px black;
+    background-color: transparent;
+    color: white;
+    font-size: 3em;
+}
+
+/*Title (Register/Login)*/
+body > main h2{
+    color: #CD5E0E;
+    font-size: 2.5em;
+}
+
+/*The image*/
+#mainImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /*Para preservar a imagem quando cortada*/
+    box-shadow: 5px 5px 20px black;
+    border-radius: 4px;
+}
+
+
+/*Input boxes*/
+body > main form input{
+    width: 70%;
+    height: 2.5em;
+    border-radius: 10px;
+    border: 1px solid #CD5E0E;
+    outline: none;
+}
+
+
+/*Button*/
+body > main form > button{
+    background-color: #FFC499;
+    border: 1px solid #CD5E0E;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 0.5em;
+    width: 7em;
+    margin-top: 1em;
+    color: #FFFFFF;
+    left: 50%;
+}
+
+/*Link have/ dont have account*/
+body > main form > a{
+    color:#CD5E0E;
+}
+
+body > main form *{
+    margin: 1em;
+    margin-left: 3em;
+}
+
+body > main form label{
+    margin-left: 40px;
+}
+
+label{
+    display: inline-block;
+    font-family: sans-serif;
+    cursor: pointer;
+
+    background-color: #FFFFFF;
+    border: 1px solid #CD5E0E;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 7em;
+    margin-top: 1em;
+    margin-left: 401em;
+    color: #808080;
+    left: 50%;
+  }
+
+  #ownership{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    margin-left: 0px;
+  }
+
+  #ownership p{
+    color: #FFFFFF;
+    text-shadow: 4px 4px 7px black;
+  }
+
+  body > main form input[type=checkbox]{
+    width: 60px;
+    height: 2.5em;
+    border-radius: 10px;
+    border: 1px solid #CD5E0E;
+    outline: none;
+  }
+
+  /* ====================== Layout =====================*/
+
+/*grid, separates the header area from the rest*/
+html{
+    overflow-x: hidden;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 20% 80% ; 
+    grid-template-columns: 95%;
+    grid-gap: 1rem;
+}
+
+/* flexbox, used in header area */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*question mark*/
+header h1{
+    flex-shrink: 3;/*preeeeety sure this doesnt do anything...*/
+}
+
+/*place login/register header links at the end*/
+header #signup{
+    align-self: flex-end;
+}
+
+/*secondary grid , divides the image from the rest of the content*/
+main{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 95%;
+    grid-gap: 1rem;
+    align-content: space-evenly;
+}
+
+/*flex to display the form vertically*/
+main form{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+@media only screen and (max-width: 360px) {
+    img{
+       display: none;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    body header h1{
+        padding: 0;
+    }
+}
